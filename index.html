@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Braga | Influenciador Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1E90FF;
+            --secondary: #FF6B6B;
+            --dark: #121212;
+            --light: #F8F9FA;
+            --gray: #6C757D;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-text h1 .highlight::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(30, 144, 255, 0.2);
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(30, 144, 255, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 144, 255, 0.3);
+        }
+
+        /* Social Media Section */
+        .social-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .social-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            top: 0;
+            left: 0;
+        }
+
+        .social-icon i {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .social-icon span {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .instagram { background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); }
+        .youtube { background: linear-gradient(45deg, #FF0000, #FF3333); }
+        .tiktok { background: linear-gradient(45deg, #6e7070, #302729); } /* Cor alterada conforme solicitado */
+        .facebook { background: linear-gradient(45deg, #1877F2, #0A5ED9); }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        /* Brands Section */
+        .brands-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--primary);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .brand-card:hover .video-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .brand-card:hover .play-icon {
+            background-color: var(--primary);
+            color: white;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .brand-content {
+            padding: 20px;
+        }
+
+        .brand-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .brand-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Collaborations Section */
+        .collabs-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .collabs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .collab-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .collab-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .collab-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collab-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .collab-card:hover .collab-image img {
+            transform: scale(1.1);
+        }
+
+        .collab-content {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .collab-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .collab-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .collab-tag {
+            display: inline-block;
+            background-color: rgba(30, 144, 255, 0.1);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Highlights Section */
+        .highlights-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .highlight-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-image {
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover .highlight-image img {
+            transform: scale(1.05);
+        }
+
+        .highlight-content {
+            padding: 15px;
+        }
+
+        .highlight-content h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .highlight-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.05) 0%, rgba(255, 107, 107, 0.05) 100%);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Logo Ricardo Braga" style="height: 40px; margin-right: 10px;">
+                Ricardo<span>Braga</span>
+            </a>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#social">Redes Sociais</a></li>
+                <li><a href="#brands">Marcas</a></li>
+                <li><a href="#collabs">Colaborações</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Conteúdo de baixa estatura que<span class="highlight">Conecta & Impacta</span></h1>
+                <p>Sou Ricardo Braga, criador de conteúdo e influenciador digital com forte presença nas principais plataformas sociais. Com um estilo autêntico, criativo e conectado às tendências, transformo conteúdo em impacto real — gerando engajamento e resultados consistentes para marcas e audiência.</p>
+                <a href="#contact" class="cta-button">Entre em Contato</a>
+            </div>
+            <div class="hero-image fade-in">
+                <!-- Substitua o link abaixo pela sua foto de perfil -->
+                <img src="img/perfil.png" alt="Ricardo Braga - Influenciador Digital">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section" id="social">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Minhas Redes Sociais</h2>
+                <p>Conecte-se comigo em todas as plataformas. Produzo conteúdo estratégico que engaja e converte.</p>
+            </div>
+            <div class="social-icons fade-in">
+                <!-- Instagram em primeiro -->
+                <a href="https://www.instagram.com/bragaricardooo" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <!-- TikTok em segundo -->
+                <a href="https://www.tiktok.com/@bragaricardoo" target="_blank" class="social-icon tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <!-- Facebook em terceiro -->
+                <a href="https://www.facebook.com/ricardo.braga.7334" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <!-- YouTube em quarto -->
+                <a href="https://www.youtube.com/@ricardobraga5590/featured" target="_blank" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+            <div class="stats fade-in">
+                <div class="stat-item">
+                    <span class="stat-number">1.5M</span>
+                    <span class="stat-label">Seguidores Totais</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30M+</span>
+                    <span class="stat-label">Visitas no Instagram/Mês</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2M</span>
+                    <span class="stat-label">Interações por Mês</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">18-35</span>
+                    <span class="stat-label">Faixa Etária Principal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section" id="brands">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Trabalhos com Marcas</h2>
+                <p>Colaborei com marcas reconhecidas, criando campanhas autênticas que geram resultados reais.</p>
+            </div>
+            <div class="brands-grid">
+                <!-- Paramount Studios -->
+                <a href="https://www.instagram.com/p/DSnRRJjCCWy/" target="_blank" class="brand-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="img/paramount-pictures-logo-min.png" alt="Paramount Studios - Ricardo Braga">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="brand-content">
+                        <h3>Paramount Studios</h3>
+                        <p>Parceria para lançamento de filme, criando conteúdo especial com teasers e bastidores.</p>
+                    </div>
+                </a>
+                
+                <!-- Max Titanium -->
+                <a href="https://www.instagram.com/p/DLC3pZXMoir/" target="_blank" class="brand-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="img/max.png" alt="Max Titanium - Ricardo Braga">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="brand-content">
+                        <h3>Max Titanium</h3>
+                        <p>Conteúdo patrocinado para a marca de suplementos, mostrando resultados e autenticidade.</p>
+                    </div>
+                </a>
+                
+                <!-- Sprite -->
+                <a href="https://www.instagram.com/p/C54MIDRu53t/" target="_blank" class="brand-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="img/sprite.png" alt="Sprite - Ricardo Braga">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="brand-content">
+                        <h3>Sprite</h3>
+                        <p>Campanha de verão com desafios criativos e conteúdo refrescante para a marca de refrigerante.</p>
+                    </div>
+                </a>
+                
+                <!-- Emma Colchões -->
+                <a href="https://www.instagram.com/p/CvzwkPmggWq/" target="_blank" class="brand-card fade-in">
+                    <div class="video-thumbnail">
+                        <img src="img/emma.png" alt="Emma Colchões - Ricardo Braga">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="brand-content">
+                        <h3>Emma Colchões</h3>
+                        <p>Conteúdo demonstrando qualidade e conforto dos produtos para noites bem dormidas.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section class="collabs-section" id="collabs">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Colaborações com Outros Influenciadores</h2>
+                <p>Participações em programas e conteúdos com alguns dos maiores criadores do Brasil.</p>
+            </div>
+            <div class="collabs-grid">
+                <!-- Castro Brothers (agora primeiro) -->
+                <a href="https://www.instagram.com/reel/DRdGZpHDvzV/?igsh=aGtuNjh1aG83cTE0" target="_blank" class="collab-card fade-in">
+                    <div class="collab-image">
+                        <img src="img/castro-brother.jpg" alt="Colaboração com Castro Brothers">
+                    </div>
+                    <div class="collab-content">
+                        <h3>Conteúdo com Castro Brothers</h3>
+                        <p>Parceria criativa com os irmãos Castro.</p>
+                        <span class="collab-tag">Colaboração especial</span>
+                    </div>
+                </a>
+                
+                <!-- Felca -->
+                <a href="https://vt.tiktok.com/ZSaNStKSY/" target="_blank" class="collab-card fade-in">
+                    <div class="collab-image">
+                        <img src="img/Felca.jpg" alt="Colaboração com Felca">
+                    </div>
+                    <div class="collab-content">
+                        <h3>Participação com Felca</h3>
+                        <p>Felca interagindo com meu vídeo, alcançando milhares de views.</p>
+                        <span class="collab-tag">Alto engajamento</span>
+                    </div>
+                </a>
+                
+                <!-- Tett -->
+                <a href="https://vt.tiktok.com/ZSaNAxuyK/" target="_blank" class="collab-card fade-in">
+                    <div class="collab-image">
+                        <img src="img/tett.jpg" alt="Colaboração com Tett">
+                    </div>
+                    <div class="collab-content">
+                        <h3>Live com Tett</h3>
+                        <p>Tett comentando meu vídeo na live</p>
+                        <span class="collab-tag">Viralizou</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section" id="highlights">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Meus Destaques</h2>
+                <p>Alguns dos meus conteúdos mais engajadores e impactantes.</p>
+            </div>
+            <div class="highlights-grid">
+                <!-- Destaque 1 -->
+                <a href="https://www.instagram.com/p/DCWsK7Mu-uB/" target="_blank" class="highlight-card fade-in">
+                    <div class="highlight-image">
+                        <img src="img/destaques1.png" alt="Destaque 1">
+                        <div class="play-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Conteúdo Criativo</h4>
+                        <p>Viral com 30M+ views</p>
+                    </div>
+                </a>
+                
+                <!-- Destaque 2 -->
+                <a href="https://www.instagram.com/p/DKzaFJvsZ5G/" target="_blank" class="highlight-card fade-in">
+                    <div class="highlight-image">
+                        <img src="img/destaques2.png" alt="Destaque 2">
+                        <div class="play-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Conteúdo Criativo</h4>
+                        <p>Mais de +2M de likes</p>
+                    </div>
+                </a>
+                
+                <!-- Destaque 3 -->
+                <a href="https://www.instagram.com/p/DKZq9ZMOsNY/" target="_blank" class="highlight-card fade-in">
+                    <div class="highlight-image">
+                        <img src="img/destaques3.png" alt="Destaque 3">
+                        <div class="play-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Momento de Humor</h4>
+                        <p>Viral com 20M+ views</p>
+                    </div>
+                </a>
+                
+                <!-- Destaque 4 -->
+                <a href="https://www.instagram.com/p/DLN9Zi0xVjW/" target="_blank" class="highlight-card fade-in">
+                    <div class="highlight-image">
+                        <img src="img/destaques4.png" alt="Destaque 4">
+                        <div class="play-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Dia a Dia</h4>
+                        <p>Alto engajamento</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Entre em Contato</h2>
+                <p>Interessado em uma colaboração? Preencha o formulário abaixo ou entre em contato diretamente.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h2>Vamos criar algo incrível juntos!</h2>
+                    <p>Como influencer, crio conteúdos que conectam marcas com públicos reais por meio de narrativas relevantes e autênticas, misturando entretenimento, lifestyle e insights pessoais para gerar impacto positivo na percepção e performance de campanhas.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>ricardo.braga.bm@gmail.com</p>
+                            </div>
+                        </div>       
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Rio de Janeiro, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Meu conteúdo é pensado para:</strong><br>
+                    • Vídeos curtos e criativos (TikTok & Reels)<br>
+                    • Posts e Stories estratégicos (Instagram)<br>
+                    • Engajamento social amplificado (Facebook)<br>
+                    • Conteúdo editorial e de longo formato (YouTube)</p>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa (opcional)</label>
+                            <input type="text" id="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Tipo de Colaboração</label>
+                            <select id="service">
+                                <option value="">Selecione uma opção</option>
+                                <option value="brand">Parceria de Marca</option>
+                                <option value="content">Criação de Conteúdo</option>
+                                <option value="event">Evento/Aparecimento</option>
+                                <option value="campaign">Campanha Publicitária</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ricardo Braga</h3>
+                    <p>Criador de conteúdo e influenciador digital com forte presença nas principais plataformas sociais. Conteúdo autêntico, criativo e conectado às tendências.</p>
+                    <div class="social-icons" style="justify-content: flex-start; margin-top: 20px;">
+                        <a href="https://www.instagram.com/bragaricardooo" target="_blank" class="social-icon instagram" style="width: 50px; height: 50px;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bragaricardoo" target="_blank" class="social-icon tiktok" style="width: 50px; height: 50px;">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.facebook.com/ricardo.braga.7334" target="_blank" class="social-icon facebook" style="width: 50px; height: 50px;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#social">Redes Sociais</a></li>
+                        <li><a href="#brands">Marcas Parceiras</a></li>
+                        <li><a href="#collabs">Colaborações</a></li>
+                        <li><a href="#highlights">Destaques</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Campanhas Publicitárias</a></li>
+                        <li><a href="#">Conteúdo Patrocinado</a></li>
+                        <li><a href="#">Aparicões em Eventos</a></li>
+                        <li><a href="#">Consultoria de Marca</a></li>
+                        <li><a href="#">Produção de Conteúdo</a></li>
+                        <li><a href="#">Parcerias de Longo Prazo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Felipe Cardoso. Crie seu webSite | felipecard4@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Form Submission com Google Apps Script
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value || '',
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Substitua pela URL do seu Google Apps Script Web App
+            fetch('https://script.google.com/macros/s/AKfycbyGGNtD42H9s3ogI0s8jFdq5muudkrLkg--ei_8ETVRomUEOxvKstMSKyX4-YZExbli/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                // Sucesso
+                alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+                document.getElementById('contactForm').reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            })
+            .catch(error => {
+                // Erro
+                alert('Erro ao enviar mensagem. Tente novamente ou entre em contato por email.');
+                submitBtn.textContent = 'Erro - Clique para tentar novamente';
+                submitBtn.disabled = false;
+                console.error('Erro:', error);
+            });
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.section-title, .social-icons, .stats, .brand-card, .collab-card, .highlight-card, .contact-info, .contact-form').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
