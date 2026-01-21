@@ -36,7 +36,7 @@ Landing page responsiva desenvolvida como portfólio online para o influenciador
 ### Frontend
 
 
-### 👤 Autor
+### 👤
 - Desenvolvido para Ricardo Braga
 - Influenciador Digital
 - https://ricardo-braga-7d1877.netlify.app/
